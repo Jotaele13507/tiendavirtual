@@ -83,7 +83,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 		
 			<div class="col-xs-12 col-sm-12 col-md-3 sidebar">
 				<!-- ================================== TOP NAVIGATION ================================== -->
-	< <?php /*include('includes/side-menu.php');*/?> <!--MENÚ DE LA IZQUIERDA CON LAS CATEGORIAS -->
+	 <?php /*include('includes/side-menu.php');*/?> <!--MENÚ DE LA IZQUIERDA CON LAS CATEGORIAS --> AQUI VA UN MENÚ
 <!-- ================================== TOP NAVIGATION : END ================================== -->
 			</div><!-- /.sidemenu-holder -->	
 			
@@ -441,7 +441,7 @@ while ($row=mysqli_fetch_array($ret))
 		
 
 	<section class="section featured-product inner-xs wow fadeInUp">
-		<h3 class="section-title">Moda</h3>
+		<h3 class="section-title">COMPONENTES</h3>
 		<div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
 			<?php
 $ret=mysqli_query($con,"select * from products where category=6");
@@ -493,7 +493,7 @@ while ($row=mysqli_fetch_array($ret))
 				</div><?php } ?>
 							</div>
 		</section>
-<?php include('includes/brands-slider.php');?>
+<?php //include('includes/brands-slider.php');?>
 </div>
 </div>
 <?php include('includes/footer.php');?>
