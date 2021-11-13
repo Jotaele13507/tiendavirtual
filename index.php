@@ -70,8 +70,8 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 	
 		<!-- ============================================== HEADER ============================================== -->
 <header class="header-style-1">
- <?php /* include('includes/top-header.php');*/?> <!--MENÚ SUPERIOR DONDE ESTÁ INICIAR SESIÓN -->
-<?php /* include('includes/main-header.php');*/?> <!--MENÚ SUPERIOR DONDE ESTÁ EL BUSCADOR -->
+ <?php include('includes/top-header.php');?> <!--MENÚ SUPERIOR DONDE ESTÁ INICIAR SESIÓN -->
+<?php include('includes/main-header.php');?> <!--MENÚ SUPERIOR DONDE ESTÁ EL BUSCADOR -->
 <?php include('includes/menu-bar.php');?> <!--MENÚ DE CATEGORIAS, PARTE SUPERIOR -->
 </header>
 
@@ -83,7 +83,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 		
 			<div class="col-xs-12 col-sm-12 col-md-3 sidebar">
 				<!-- ================================== TOP NAVIGATION ================================== -->
-	 <?php /*include('includes/side-menu.php');*/?> <!--MENÚ DE LA IZQUIERDA CON LAS CATEGORIAS --> AQUI VA UN MENÚ
+	 <?php include('includes/side-menu.php');?> <!--MENÚ DE LA IZQUIERDA CON LAS CATEGORIAS -->
 <!-- ================================== TOP NAVIGATION : END ================================== -->
 			</div><!-- /.sidemenu-holder -->	
 			
