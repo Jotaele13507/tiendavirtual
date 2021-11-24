@@ -9,22 +9,22 @@
         <div class="logo">
             <a href="index.php">
                 
-<h3>TECHVISION</h3>
+<h3>Tienda Virtual Platea21</h3>
             </a>
         </div><!-- /.logo -->
     
     </div><!-- /.footer-logo -->
 
      <div class="module-body m-t-20">
-        <p class="about-us">TIENDA VIRTUAL DE ARITUCLOS TECNOLOGIVOS</p>
+        <p class="about-us"> Platea21, tienda virtual en php & mysql (Código Abierto).</p>
     
         <div class="social-icons">
             
-        <a href="#" class='active'><i class="icon fa fa-facebook"></i></a>
-        <a href="#"><i class="icon fa fa-twitter"></i></a>
-        <a href="#"><i class="icon fa fa-linkedin"></i></a>
-        <a href="#"><i class="icon fa fa-rss"></i></a>
-        <a href="#"><i class="icon fa fa-pinterest"></i></a>
+        <a href="https://facebook.com/platea21" class='active'><i class="icon fa fa-facebook"></i></a>
+        <a href="https://platea21.blogspot.com"><i class="icon fa fa-twitter"></i></a>
+        <a href="https://platea21.blogspot.com"><i class="icon fa fa-linkedin"></i></a>
+        <a href="https://platea21.blogspot.com"><i class="icon fa fa-rss"></i></a>
+        <a href="https://platea21.blogspot.com"><i class="icon fa fa-pinterest"></i></a>
 
         </div><!-- /.social-icons -->
     </div><!-- /.module-body -->
@@ -43,9 +43,9 @@
 		<div class="table-responsive">
 			<table class="table">
 				<tbody>
-					<tr><td>Lunes-Viernes:</td><td class="pull-right">08:00 A.M - 06:00 P.M</td></tr>
-					<tr><td>Sábados:</td><td class="pull-right">09:00 A.M - 06:00 P.M</td></tr>
-					<tr><td>Domingos:</td><td class="pull-right">10:00 A.M - 12:00 P.M</td></tr>
+					<tr><td>Lunes-Viernes:</td><td class="pull-right">08:00 a 18:00 hrs</td></tr>
+					<tr><td>Sábados:</td><td class="pull-right">09:00 a 20:00</td></tr>
+					<tr><td>Domingos:</td><td class="pull-right">10:00 a 20:00</td></tr>
 				</tbody>
 			</table>
 		</div><!-- /.table-responsive -->
@@ -70,7 +70,7 @@
                     </span>
                 </div>
                 <div class="media-body">
-                    <p>Panamá, Ciudad de Panamá</p>
+                    <p>Tacna, Perú</p>
                 </div>
             </li>
 
@@ -82,7 +82,7 @@
                     </span>
                 </div>
                 <div class="media-body">
-                    <p>(+507) 6547-2109<br>(+507) 267-5399</p>
+                    <p>(+51) 948445199<br>(+51) 948445199</p>
                 </div>
             </li>
 
@@ -94,7 +94,7 @@
                     </span>
                 </div>
                 <div class="media-body">
-                    <span><a href="#">support@techvision.com</a></span>
+                    <span><a href="#">gorchor@gmail.com</a></span>
                 </div>
             </li>
               

@@ -185,7 +185,7 @@ while ($rws=mysqli_fetch_array($ret)) {
 									<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
 								<i class="fa fa-shopping-cart"></i>													
 							</button>
-						<a href="product-details.php?page=product&action=add&id=<?php echo $rws['id']; ?>" class="lnk btn btn-primary" style="height:34px;padding-top: 5px;">Agregar a carrito </a>
+						<a href="product-details.php?page=product&action=add&id=<?php echo $rws['id']; ?>" class="lnk btn btn-primary" style="height:34px;padding-top: 5px;">Agregar a carrito</a>
 						
 													
 															
