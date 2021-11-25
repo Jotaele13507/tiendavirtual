@@ -34,7 +34,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 	<meta name="keywords" content="MediaCenter, Template, eCommerce">
 	<meta name="robots" content="all">
 
-	<title>e-Commerce PHP & MYSQL Platea21 - Pagina principal</title>
+	<title>TECHVISION - Pagina principal</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -72,9 +72,9 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 	<!-- ============================================== HEADER ============================================== -->
 	<header class="header-style-1">
-		<?php /* include('includes/top-header.php');*/ ?>
+		<?php include('includes/top-header.php'); ?>
 		<!--MENÚ SUPERIOR DONDE ESTÁ INICIAR SESIÓN -->
-		<?php /* include('includes/main-header.php');*/ ?>
+		<?php include('includes/main-header.php'); ?>
 		<!--MENÚ SUPERIOR DONDE ESTÁ EL BUSCADOR -->
 		<?php include('includes/menu-bar.php'); ?>
 		<!--MENÚ DE CATEGORIAS, PARTE SUPERIOR -->
@@ -88,7 +88,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 					<div class="col-xs-12 col-sm-12 col-md-3 sidebar">
 						<!-- ================================== TOP NAVIGATION ================================== -->
-						< <?php /*include('includes/side-menu.php');*/ ?> <!--MENÚ DE LA IZQUIERDA CON LAS CATEGORIAS -->
+						< <?php include('includes/side-menu.php');?> <!--MENÚ DE LA IZQUIERDA CON LAS CATEGORIAS -->
 							<!-- ================================== TOP NAVIGATION : END ================================== -->
 					</div><!-- /.sidemenu-holder -->
 

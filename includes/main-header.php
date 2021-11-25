@@ -20,7 +20,7 @@
 <div class="logo">
 	<a href="index.php">
 		
-		<h2>Tienda Virtual Platea21</h2>
+		<h2>TECHVISION</h2>
 
 	</a>
 </div>		
@@ -87,21 +87,20 @@ if(!empty($_SESSION['cart'])){
 					<div class="row">
 						<div class="col-xs-4">
 							<div class="image">
-								<a href="detail.html"><img  src="admin/productimages/<?php echo $row['id'];?>/<?php echo $row['productImage1'];?>" width="35" height="50" alt=""></a>
+								<a href="detail.html"><img  src="admin/productimages/<?php echo $row['id'];?>/<?php echo $row['productImage1'];?>" width="45" height="50" alt=""></a>
 							</div>
 						</div>
 						<div class="col-xs-7">
 							
 							<h3 class="name"><a href="index.php?page-detail"><?php echo $row['productName']; ?></a></h3>
-							<div class="price">$.<?php echo ($row['productPrice']+$row['shippingCharge']); ?>*<?php echo $_SESSION['cart'][$row['id']]['quantity']; ?></div>
+							<div class="price"> Cantidad <?php echo $_SESSION['cart'][$row['id']]['quantity'];?>  $.<?php echo ($row['productPrice']+$row['shippingCharge']);?>.00</div><hr>
 						</div>
-						
 					</div>
 				</div><!-- /.cart-item -->
 			
 				<?php } }?>
 				<div class="clearfix"></div>
-			<hr>
+		
 		
 			<div class="clearfix cart-total">
 				<div class="pull-right">
