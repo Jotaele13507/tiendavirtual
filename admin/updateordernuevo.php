@@ -18,7 +18,7 @@ echo "<script>alert('Order updated sucessfully...');</script>";
 }
 
  ?>
-<script language="javascript" type="text/javascript">
+ <script language="javascript" type="text/javascript">
 function f2()
 {
 window.close();
@@ -28,26 +28,50 @@ function f3()
 window.print(); 
 }
 </script>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Actualizar pedido</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
-<link href="anuj.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin | Actualizar Estado del Pedido </title>
+	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link type="text/css" href="css/theme.css" rel="stylesheet">
+	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
+	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
+	<script language="javascript" type="text/javascript">
+var popUpWin=0;
+function popUpWindow(URLStr, left, top, width, height)
+{
+ if(popUpWin)
+{
+if(!popUpWin.closed) popUpWin.close();
+}
+popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width='+600+',height='+600+',left='+left+', top='+top+',screenX='+left+',screenY='+top+'');
+}
+
+</script>
 </head>
 <body>
+<?php include('include/header.php');?>
 
-<div style="margin-left:50px;">
+	<div class="wrapper">
+		<div class="container">
+			<div class="row">
+			<div class="span11">
+					<div class="content">
+
+	<div class="module">
+                            <div style="margin-left:50px;">
  <form name="updateticket" id="updateticket" method="post"> 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 
     <tr height="50">
-      <td colspan="2" class="fontkink2" style="padding-left:0px;"><div class="fontpink2"> <b>Actualizar estado de pedido !</b></div></td>
+      <td colspan="2" class="fontkink2" style="padding-left:0px;"><div class="fontpink1"> <b>Actualizar estado de pedido !</b></div></td>
       
     </tr>
     <tr height="30">
-      <td  class="fontkink1"><b>Nro Orden:</b></td>
+      <td  class="fontkink2"><b>Nro Orden:</b></td>
       <td  class="fontkink"><?php echo $oid;?></td>
     </tr>
     <?php 
@@ -55,9 +79,7 @@ $ret = mysqli_query($con,"SELECT * FROM ordertrackhistory WHERE orderId='$oid'")
      while($row=mysqli_fetch_array($ret))
       {
      ?>
-		
-    
-    
+	
       <tr height="20">
       <td class="fontkink1" ><b>Fecha:</b></td>
       <td  class="fontkink"><?php echo $row['postingDate'];?></td>
@@ -120,9 +142,6 @@ $st='Entregado';
 </table>
  </form>
 </div>
-
 </body>
 </html>
 <?php } ?>
-
-     

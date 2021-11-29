@@ -12,14 +12,14 @@ if(isset($_POST['submit']))
 	$category=$_POST['category'];
 	$subcat=$_POST['subcategory'];
 $sql=mysqli_query($con,"insert into subcategory(categoryid,subcategory) values('$category','$subcat')");
-$_SESSION['msg']="SubCategory Created !!";
+$_SESSION['msg']="Sub-Categoria Creada !!";
 
 }
 
 if(isset($_GET['del']))
 		  {
 		          mysqli_query($con,"delete from subcategory where id = '".$_GET['id']."'");
-                  $_SESSION['delmsg']="SubCategory deleted !!";
+                  $_SESSION['delmsg']="Sub-Categoria Eliminada !!";
 		  }
 
 ?>
@@ -99,7 +99,7 @@ while($row=mysqli_fetch_array($query))
 
 	<div class="control-group">
 											<div class="controls">
-												<button type="submit" name="submit" class="btn">Crear</button>
+												<button type="submit" name="submit" class="btn btn-success">Crear</button>
 											</div>
 										</div>
 									</form>
