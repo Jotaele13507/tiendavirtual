@@ -30,10 +30,10 @@ $num_rows1 = mysqli_num_rows($result);
 									<li>
 										<a href="pending-orders.php">
 											<i class="icon-tasks"></i>
-											Pedidos pendientes
+											Pedidos Pendientes
 										<?php	
-	$status='Delivered';									 
-$ret = mysqli_query($con,"SELECT * FROM Orders where orderStatus!='$status' || orderStatus is null ");
+	$status='Pendiente';									 
+$ret = mysqli_query($con,"SELECT * FROM Orders where orderStatus='$status' || orderStatus is null ");
 $num = mysqli_num_rows($ret);
 {?><b class="label orange pull-right"><?php echo htmlentities($num); ?></b>
 <?php } ?>
@@ -42,9 +42,9 @@ $num = mysqli_num_rows($ret);
 									<li>
 										<a href="delivered-orders.php">
 											<i class="icon-inbox"></i>
-											Pedidos entregados
+											Pedidos Entregados
 								<?php	
-	$status='Delivered';									 
+	$status='Entregado';									 
 $rt = mysqli_query($con,"SELECT * FROM Orders where orderStatus='$status'");
 $num1 = mysqli_num_rows($rt);
 {?><b class="label green pull-right"><?php echo htmlentities($num1); ?></b>
@@ -58,7 +58,7 @@ $num1 = mysqli_num_rows($rt);
 							<li>
 								<a href="manage-users.php">
 									<i class="menu-icon icon-group"></i>
-									Administrar usuarios
+									Administrar Usuarios
 								</a>
 							</li>
 						</ul>

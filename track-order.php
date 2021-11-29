@@ -63,6 +63,7 @@ while($row=mysqli_fetch_array($ret))
     <tr>
       <td colspan="2"><hr /></td>
     </tr>
+    
    <?php } }
 else{
    ?>
@@ -70,7 +71,7 @@ else{
    <td colspan="2">Orden aún no procesada</td>
    </tr>
    <?php  }
-$st='Delivered';
+$st='Entregado';
    $rt = mysqli_query($con,"SELECT * FROM orders WHERE id='$oid'");
      while($num=mysqli_fetch_array($rt))
      {
@@ -80,9 +81,11 @@ $st='Delivered';
      { ?>
    <tr><td colspan="2"><b>
       Producto entregado exitosamente </b></td>
+      
    <?php } 
  
   ?>
+  
 </table>
  </form>
 </div>

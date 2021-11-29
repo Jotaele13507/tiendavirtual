@@ -17,7 +17,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin| Ordenes pendientes</title>
+	<title>Admin | Pedidos de Hoy </title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -48,7 +48,7 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Pedidos pendientes</h3>
+								<h3>Pedidos de Hoy</h3>
 							</div>
 							<div class="module-body table">
 	<?php if(isset($_GET['del']))
@@ -98,9 +98,9 @@ while($row=mysqli_fetch_array($query))
 											<td><?php echo htmlentities($row['shippingaddress'].",".$row['shippingcity'].",".$row['shippingstate']."-".$row['shippingpincode']);?></td>
 											<td><?php echo htmlentities($row['productname']);?></td>
 											<td><?php echo htmlentities($row['quantity']);?></td>
-											<td><?php echo htmlentities($row['quantity']*$row['productprice']+$row['shippingcharge']);?></td>
+											<td>$<?php echo htmlentities($row['quantity']*$row['productprice']+$row['shippingcharge']);?>.00</td>
 											<td><?php echo htmlentities($row['orderdate']);?></td>
-											<td>    <a href="updateorder.php?oid=<?php echo htmlentities($row['id']);?>" title="Update order" target="_blank"><i class="icon-edit"></i></a>
+											<td>    <a href="updateordernuevo.php?oid=<?php echo htmlentities($row['id']);?>" title="Update order" target="_blank"><i class="icon-edit"></i></a>
 											</td>
 											</tr>
 

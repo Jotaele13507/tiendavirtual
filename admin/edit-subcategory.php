@@ -17,7 +17,8 @@ if(isset($_POST['submit']))
 	$subcat=$_POST['subcategory'];
 	$id=intval($_GET['id']);
 $sql=mysqli_query($con,"update subcategory set categoryid='$category',subcategory='$subcat',updationDate='$currentTime' where id='$id'");
-$_SESSION['msg']="Sub-Category Updated !!";
+$_SESSION['msg']="Sub-Categoria Actualizada!!";
+header('location: subcategory.php'); //Redirecciona a la pagina anterior cuando se hace la actualización.
 
 }
 
@@ -105,7 +106,8 @@ else{
 
 	<div class="control-group">
 											<div class="controls">
-												<button type="submit" name="submit" class="btn">Actualizar</button>
+											<a href="subcategory.php"><button type="button" name="submit" class="btn btn-info">Actualizar</button></a>
+
 											</div>
 										</div>
 									</form>
