@@ -57,6 +57,7 @@ $(function () {
         } else {
             // Everything is correct. Add your form submission code here.
             alert("Datos Correctos");
+            window.location = "order-history.php";
         }
     });
 });
