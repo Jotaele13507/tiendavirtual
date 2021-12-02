@@ -110,6 +110,9 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 
 <?php $query=mysqli_query($con,"select products.productImage1 as pimg1,products.productName as pname,products.id as proid,orders.productId as opid,orders.quantity as qty,products.productPrice as pprice,products.shippingCharge as shippingcharge,orders.paymentMethod as paym,orders.orderDate as odate,orders.id as orderid from orders join products on orders.productId=products.id where orders.userId='".$_SESSION['id']."' and orders.paymentMethod is not null");
 $cnt=1;
+$num=mysqli_num_rows($query);
+if($num>0)
+{
 while($row=mysqli_fetch_array($query))
 {
 ?>
@@ -129,9 +132,9 @@ while($row=mysqli_fetch_array($query))
 					<td class="cart-product-quantity">
 						<?php echo $qty=$row['qty']; ?>   
 		            </td>
-					<td class="cart-product-sub-total"><?php echo $price=$row['pprice']; ?>  </td>
-					<td class="cart-product-sub-total"><?php echo $shippcharge=$row['shippingcharge']; ?>  </td>
-					<td class="cart-product-grand-total"><?php echo (($qty*$price)+$shippcharge);?>.00</td>
+					<td class="cart-product-sub-total">$<?php echo $price=$row['pprice']; ?>  </td>
+					<td class="cart-product-sub-total">$<?php echo $shippcharge=$row['shippingcharge']; ?>  </td>
+					<td class="cart-product-grand-total">$<?php echo (($qty*$price)+$shippcharge);?>.00</td>
 					<td class="cart-product-sub-total"><?php echo $row['paym']; ?>  </td>
 					<td class="cart-product-sub-total"><?php echo $row['odate']; ?>  </td>
 					
@@ -140,9 +143,13 @@ while($row=mysqli_fetch_array($query))
 					Seguimiento</td>
 				</tr>
 <?php $cnt=$cnt+1;} ?>
+<?php } else {?>
+<tr>
+<td colspan="10" align="center"><h4>No cuenta con pedidos hasta la fecha</h4></td>
+</tr>
+<?php } ?>
 			</tbody><!-- /tbody -->
 		</table><!-- /table --><br><br>
-		<!-- <center><h4 class="section-title">No cuenta con ningún pedido hasta la fecha</h4>   Debe salir cuando no hay ningun producto -->
 	</div>
 </div>
 

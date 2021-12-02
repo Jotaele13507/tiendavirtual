@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-11-2021 a las 16:42:52
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.12
+-- Tiempo de generación: 30-11-2021 a las 03:30:29
+-- Versión del servidor: 10.4.22-MariaDB
+-- Versión de PHP: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -65,7 +65,7 @@ INSERT INTO `category` (`id`, `categoryName`, `categoryDescription`, `creationDa
 (4, 'Electronico', 'Productos Electronicos', '2017-01-24 19:19:32', ''),
 (5, 'Mobilario', 'Mobiliario para tu casa u oficina.', '2017-01-24 19:19:54', '27-10-2021 10:44:06 AM'),
 (6, 'Componentes', 'Componentes de PC', '2017-02-20 19:18:52', '27-10-2021 10:11:44 AM'),
-(7, 'Impresoras', 'impresoras', '2021-10-27 15:44:59', NULL);
+(7, 'Impresoras', 'Impresoras Multifuncionales, De formato Ancho y más.', '2021-10-27 15:44:59', '28-11-2021 08:42:23 PM');
 
 -- --------------------------------------------------------
 
@@ -83,27 +83,6 @@ CREATE TABLE `orders` (
   `orderStatus` varchar(55) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `orders`
---
-
-INSERT INTO `orders` (`id`, `userId`, `productId`, `quantity`, `orderDate`, `paymentMethod`, `orderStatus`) VALUES
-(1, 1, '3', 1, '2017-03-07 19:32:57', 'COD', NULL),
-(3, 1, '4', 1, '2017-03-10 19:43:04', 'Debit / Credit card', 'Delivered'),
-(4, 1, '17', 1, '2017-03-08 16:14:17', 'COD', 'in Process'),
-(5, 1, '3', 1, '2017-03-08 19:21:38', 'COD', NULL),
-(6, 1, '4', 1, '2017-03-08 19:21:38', 'COD', NULL),
-(7, 1, '2', 1, '2020-06-22 13:58:56', 'Internet Banking', NULL),
-(8, 1, '1', 1, '2020-06-22 14:06:25', 'COD', NULL),
-(9, 1, '12', 1, '2020-06-22 14:06:25', 'COD', NULL),
-(10, 4, '2', 3, '2020-06-23 00:58:37', 'Debit / Credit card', NULL),
-(11, 4, '18', 1, '2020-06-23 01:54:11', 'Internet Banking', NULL),
-(12, 4, '20', 1, '2020-06-23 03:02:41', 'Internet Banking', NULL),
-(13, 4, '15', 1, '2020-06-23 03:04:45', 'COD', NULL),
-(14, 4, '12', 1, '2020-06-23 03:07:50', NULL, NULL),
-(15, 4, '15', 1, '2020-06-23 03:07:50', NULL, NULL),
-(16, 4, '2', 1, '2020-06-23 03:23:40', NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -117,16 +96,6 @@ CREATE TABLE `ordertrackhistory` (
   `remark` mediumtext DEFAULT NULL,
   `postingDate` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `ordertrackhistory`
---
-
-INSERT INTO `ordertrackhistory` (`id`, `orderId`, `status`, `remark`, `postingDate`) VALUES
-(1, 3, 'in Process', 'Order has been Shipped.', '2017-03-10 19:36:45'),
-(2, 1, 'Delivered', 'Order Has been delivered', '2017-03-10 19:37:31'),
-(3, 3, 'Delivered', 'Product delivered successfully', '2017-03-10 19:43:04'),
-(4, 4, 'in Process', 'Product ready for Shipping', '2017-03-10 19:50:36');
 
 -- --------------------------------------------------------
 
@@ -223,12 +192,12 @@ CREATE TABLE `subcategory` (
 --
 
 INSERT INTO `subcategory` (`id`, `categoryid`, `subcategory`, `creationDate`, `updationDate`) VALUES
-(2, 4, 'TV LED', '2017-01-26 16:24:52', '26-01-2017 11:03:40 PM'),
-(3, 4, 'Television', '2017-01-26 16:29:09', ''),
+(2, 4, 'Accesorios para TV', '2017-01-26 16:24:52', '28-11-2021 09:13:25 PM'),
+(3, 4, 'Televisores', '2017-01-26 16:29:09', '28-11-2021 09:13:47 PM'),
 (4, 4, 'Dispositivos Moviles', '2017-01-30 16:55:48', ''),
 (5, 4, 'Accesorios Moviles', '2017-02-04 04:12:40', ''),
 (6, 4, 'Laptops', '2017-02-04 04:13:00', ''),
-(7, 4, 'Computadoras', '2017-02-04 04:13:27', ''),
+(7, 4, 'Computadoras de Escritorio (Desktop)', '2017-02-04 04:13:27', '28-11-2021 09:35:23 PM'),
 (8, 3, 'Audífonos & Headsets', '2017-02-04 04:13:54', '27-10-2021 10:39:20 AM'),
 (9, 5, 'Sillas', '2017-02-04 04:36:45', '27-10-2021 10:40:30 AM'),
 (10, 5, 'Mesas', '2017-02-04 04:37:02', '27-10-2021 10:40:48 AM'),
@@ -284,7 +253,18 @@ INSERT INTO `userlog` (`id`, `userEmail`, `userip`, `loginTime`, `logout`, `stat
 (27, 'platea21@platea21.com', 0x3a3a3100000000000000000000000000, '2020-06-23 00:58:24', '22-06-2020 08:40:53 PM', 1),
 (28, 'platea21@platea21.com', 0x3a3a3100000000000000000000000000, '2020-06-23 01:45:10', NULL, 1),
 (29, 'platea21@platea21.com', 0x3a3a3100000000000000000000000000, '2020-06-23 03:23:26', NULL, 0),
-(30, 'platea21@platea21.com', 0x3a3a3100000000000000000000000000, '2020-06-23 03:23:36', NULL, 1);
+(30, 'platea21@platea21.com', 0x3a3a3100000000000000000000000000, '2020-06-23 03:23:36', NULL, 1),
+(31, 'jorgerodriguez@mail.com', 0x3a3a3100000000000000000000000000, '2021-11-29 03:51:36', NULL, 1),
+(32, 'jorgerodriguez@mail.com', 0x3a3a3100000000000000000000000000, '2021-11-29 05:51:47', '29-11-2021 01:16:54 AM', 1),
+(33, 'suyitzacast@mail.com', 0x3a3a3100000000000000000000000000, '2021-11-29 06:19:55', '29-11-2021 01:20:16 AM', 1),
+(34, 'suyitzacast@mail.com', 0x3a3a3100000000000000000000000000, '2021-11-29 06:21:37', '29-11-2021 02:27:47 PM', 1),
+(35, 'suyitzacast@mail.com', 0x3a3a3100000000000000000000000000, '2021-11-29 19:27:52', '29-11-2021 04:09:40 PM', 1),
+(36, 'suyitzacast@mail.com', 0x3a3a3100000000000000000000000000, '2021-11-29 21:09:54', '29-11-2021 04:14:35 PM', 1),
+(37, 'suyitzacast@mail.com', 0x3a3a3100000000000000000000000000, '2021-11-29 21:14:39', '29-11-2021 04:16:30 PM', 1),
+(38, 'suyitzacast@mail.com', 0x3a3a3100000000000000000000000000, '2021-11-29 21:17:15', '29-11-2021 04:19:20 PM', 1),
+(39, 'suyitzacast@mail.com', 0x3a3a3100000000000000000000000000, '2021-11-29 21:20:55', NULL, 1),
+(40, 'suyitzacast@mail.com', 0x3a3a3100000000000000000000000000, '2021-11-30 01:23:49', '29-11-2021 09:09:23 PM', 1),
+(41, 'suyitzacast@mail.com', 0x3a3a3100000000000000000000000000, '2021-11-30 02:11:48', '29-11-2021 09:26:03 PM', 1);
 
 -- --------------------------------------------------------
 
@@ -315,10 +295,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `contactno`, `password`, `shippingAddress`, `shippingState`, `shippingCity`, `shippingPincode`, `billingAddress`, `billingState`, `billingCity`, `billingPincode`, `regDate`, `updationDate`) VALUES
-(1, 'Anuj Kumar', 'anuj.lpu1@gmail.com', 9009857868, 'f925916e2754e5e03f75dd58a5733251', 'CS New Delhi', 'New Delhi', 'Delhi', 110001, 'New Delhi', 'New Delhi', 'Delhi', 110092, '2017-02-04 19:30:50', ''),
-(2, 'Amit ', 'amit@gmail.com', 8285703355, '5c428d8875d2948607f3e3fe134d71b4', '', '', '', 0, '', '', '', 0, '2017-03-15 17:21:22', ''),
-(3, 'hg', 'hgfhgf@gmass.com', 1121312312, '827ccb0eea8a706c4c34a16891f84e7b', '', '', '', 0, '', '', '', 0, '2018-04-29 09:30:32', ''),
-(4, 'Platea21', 'platea21@platea21.com', 948445199, '77821d6f09aad66ace339068f6b7f61c', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-06-23 00:58:07', NULL);
+(5, 'Jorge Rodriguez', 'jorgerodriguez@mail.com', 54328765, 'be8ef5d622c2d9e1572f2b1322164ab9', 'Panamá\r\nJ 33', 'Panamá', 'Panamá', 0, 'Panamá\r\nJ 33', 'Panamá', 'Panamá', 0, '2021-11-29 03:51:28', NULL),
+(6, 'Suyitza Castillo', 'suyitzacast@mail.com', 63459802, '949377b685014ca1f0324c963f642f37', 'Panamá\r\nJ 33', 'Panamá', 'Panamá', 0, 'Panamá\r\nJ 33', 'Panamá', 'Panamá', 0, '2021-11-29 06:18:18', NULL);
 
 -- --------------------------------------------------------
 
@@ -425,13 +403,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT de la tabla `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `ordertrackhistory`
 --
 ALTER TABLE `ordertrackhistory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `productreviews`
@@ -455,13 +433,13 @@ ALTER TABLE `subcategory`
 -- AUTO_INCREMENT de la tabla `userlog`
 --
 ALTER TABLE `userlog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `wishlist`

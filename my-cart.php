@@ -49,7 +49,7 @@ else{
 
 
 mysqli_query($con,"insert into orders(userId,productId,quantity) values('".$_SESSION['id']."','$qty','$val34')");
-header('location:payment-method.php');
+header('location:payment-methodnuevo.php');
 }
 }
 }
@@ -69,7 +69,7 @@ header('location:payment-method.php');
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>My Cart</title>
+	    <title>Carrito de Compra</title>
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="assets/css/main.css">
 	    <link rel="stylesheet" href="assets/css/green.css">

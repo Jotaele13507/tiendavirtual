@@ -12,10 +12,10 @@ $password=md5($_POST['password']);
 $query=mysqli_query($con,"insert into users(name,email,contactno,password) values('$name','$email','$contactno','$password')");
 if($query)
 {
-	echo "<script>alert('You are successfully register');</script>";
+	echo "<script>alert('Registro Exitoso');</script>";
 }
 else{
-echo "<script>alert('Not register something went worng');</script>";
+echo "<script>alert('Registro Fallido, Intentelo Nuevamente');</script>";
 }
 }
 // Code for User login
@@ -70,7 +70,7 @@ exit();
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>Tienda Virtual Platea21 | Signi-in | Signup</title>
+	    <title>TECHVISION | Registro | Iniciar Sesión</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">

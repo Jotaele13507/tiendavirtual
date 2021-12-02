@@ -32,7 +32,7 @@ echo "<script>alert('Dirección de facturación a sido actualizada');</script>";
 		$query=mysqli_query($con,"update users set shippingAddress='$saddress',shippingState='$sstate',shippingCity='$scity',shippingPincode='$spincode' where id='".$_SESSION['id']."'");
 		if($query)
 		{
-echo "<script>alert('Shipping Address has been updated');</script>";
+echo "<script>alert('Dirección de Envío Actualizada');</script>";
 		}
 	}
 
