@@ -17,7 +17,7 @@ if(isset($_POST['submit']))
 	$subcat=$_POST['subcategory'];
 	$id=intval($_GET['id']);
 $sql=mysqli_query($con,"update subcategory set categoryid='$category',subcategory='$subcat',updationDate='$currentTime' where id='$id'");
-$_SESSION['msg']="Sub-Categoria Actualizada!!";
+$_SESSION['msg']="Sub-Categoría Actualizada!!";
 header('location: subcategory.php'); //Redirecciona a la pagina anterior cuando se hace la actualización.
 
 }
@@ -28,7 +28,7 @@ header('location: subcategory.php'); //Redirecciona a la pagina anterior cuando 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin| Editar SubCategoria</title>
+	<title>Admin| Editar SubCategoría</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -47,7 +47,7 @@ header('location: subcategory.php'); //Redirecciona a la pagina anterior cuando 
 
 						<div class="module">
 							<div class="module-head">
-								<h3>Editar SubCategoria</h3>
+								<h3>Editar SubCategoría</h3>
 							</div>
 							<div class="module-body">
 
@@ -71,7 +71,7 @@ while($row=mysqli_fetch_array($query))
 ?>		
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Categoria</label>
+<label class="control-label" for="basicinput">Categoría</label>
 <div class="controls">
 <select name="category" class="span8 tip" required>
 <option value="<?php echo htmlentities($row['id']);?>"><?php echo htmlentities($catname=$row['categoryName']);?></option>
@@ -95,9 +95,9 @@ else{
 
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Nombre de subcategoria</label>
+<label class="control-label" for="basicinput">Nombre de subcategoría</label>
 <div class="controls">
-<input type="text" placeholder="Ingrese nombre de subcategoria"  name="subcategory" value="<?php echo  htmlentities($row['subcategory']);?>" class="span8 tip" required>
+<input type="text" placeholder="Ingrese nombre de subcategoría"  name="subcategory" value="<?php echo  htmlentities($row['subcategory']);?>" class="span8 tip" required>
 </div>
 </div>
 

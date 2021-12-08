@@ -32,7 +32,7 @@ if(isset($_GET['del']))
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin| Categoria</title>
+	<title>Admin| Categoría</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -51,7 +51,7 @@ if(isset($_GET['del']))
 
 						<div class="module">
 							<div class="module-head">
-								<h3>Categoria</h3>
+								<h3>Categoría</h3>
 							</div>
 							<div class="module-body">
 
@@ -77,9 +77,9 @@ if(isset($_GET['del']))
 			<form class="form-horizontal row-fluid" name="Category" method="post" >
 									
 <div class="control-group">
-<label class="control-label" for="basicinput">Nombre categoria</label>
+<label class="control-label" for="basicinput">Nombre categoría</label>
 <div class="controls">
-<input type="text" placeholder="Ingrese nombre de categoria"  name="category" class="span8 tip" required>
+<input type="text" placeholder="Ingrese nombre de categoría"  name="category" class="span8 tip" required>
 </div>
 </div>
 
@@ -103,14 +103,14 @@ if(isset($_GET['del']))
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Administrar Categorias</h3>
+								<h3>Administrar Categorías</h3>
 							</div>
 							<div class="module-body table">
 								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
 									<thead>
 										<tr>
 											<th>#</th>
-											<th>Categoria</th>
+											<th>Categoría</th>
 											<th>Descripción</th>
 											<th>Fecha de creación</th>
 											<th>Última actualización</th>

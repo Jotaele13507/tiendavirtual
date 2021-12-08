@@ -111,7 +111,7 @@ header('location:my-wishlist.php');
 	            <!-- ================================== TOP NAVIGATION ================================== -->
 <div class="side-menu animate-dropdown outer-bottom-xs">       
 <div class="side-menu animate-dropdown outer-bottom-xs">
-    <div class="head"><i class="icon fa fa-align-justify fa-fw"></i>Sub Categoria</div>        
+    <div class="head"><i class="icon fa fa-align-justify fa-fw"></i>Sub Categoría</div>        
     <nav class="yamm megamenu-horizontal" role="navigation">
   
         <ul class="nav">
@@ -136,7 +136,7 @@ while($row=mysqli_fetch_array($sql))
 		            	<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
 <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
 	<div class="widget-header m-t-20">
-		<h4 class="widget-title">Categoria</h4>
+		<h4 class="widget-title">Categoría</h4>
 	</div>
 	<div class="sidebar-widget-body m-t-10">
 	         <?php $sql=mysqli_query($con,"select id,categoryName  from category");

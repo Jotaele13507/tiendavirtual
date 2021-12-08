@@ -99,7 +99,7 @@ header('location:my-wishlist.php');
 		            	<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
 <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
 	<div class="widget-header m-t-20">
-		<h4 class="widget-title">Categoria</h4>
+		<h4 class="widget-title">Categoría</h4>
 	</div>
 	<div class="sidebar-widget-body m-t-10">
 	         <?php $sql=mysql_query("select id,categoryName from category");

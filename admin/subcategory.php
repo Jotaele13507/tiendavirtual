@@ -12,14 +12,14 @@ if(isset($_POST['submit']))
 	$category=$_POST['category'];
 	$subcat=$_POST['subcategory'];
 $sql=mysqli_query($con,"insert into subcategory(categoryid,subcategory) values('$category','$subcat')");
-$_SESSION['msg']="Sub-Categoria Creada !!";
+$_SESSION['msg']="Sub-Categoría Creada !!";
 
 }
 
 if(isset($_GET['del']))
 		  {
 		          mysqli_query($con,"delete from subcategory where id = '".$_GET['id']."'");
-                  $_SESSION['delmsg']="Sub-Categoria Eliminada !!";
+                  $_SESSION['delmsg']="Sub-Categoría Eliminada !!";
 		  }
 
 ?>
@@ -28,7 +28,7 @@ if(isset($_GET['del']))
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin| SubCategoria</title>
+	<title>Admin| SubCategoría</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -47,7 +47,7 @@ if(isset($_GET['del']))
 
 						<div class="module">
 							<div class="module-head">
-								<h3>Subcategoria</h3>
+								<h3>Subcategoría</h3>
 							</div>
 							<div class="module-body">
 
@@ -73,10 +73,10 @@ if(isset($_GET['del']))
 			<form class="form-horizontal row-fluid" name="subcategory" method="post" >
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Categoria</label>
+<label class="control-label" for="basicinput">Categoría</label>
 <div class="controls">
 <select name="category" class="span8 tip" required>
-<option value="">Seleccione categoria</option> 
+<option value="">Seleccione categoría</option> 
 <?php $query=mysqli_query($con,"select * from category");
 while($row=mysqli_fetch_array($query))
 {?>
@@ -89,9 +89,9 @@ while($row=mysqli_fetch_array($query))
 
 									
 <div class="control-group">
-<label class="control-label" for="basicinput">Nombre de subcategoria</label>
+<label class="control-label" for="basicinput">Nombre de subcategoría</label>
 <div class="controls">
-<input type="text" placeholder="Ingrese nombre de subcategoria"  name="subcategory" class="span8 tip" required>
+<input type="text" placeholder="Ingrese nombre de subcategoría"  name="subcategory" class="span8 tip" required>
 </div>
 </div>
 
@@ -109,14 +109,14 @@ while($row=mysqli_fetch_array($query))
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Subcategoria</h3>
+								<h3>Subcategoría</h3>
 							</div>
 							<div class="module-body table">
 								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
 									<thead>
 										<tr>
 											<th>#</th>
-											<th>Categoria</th>
+											<th>Categoría</th>
 											<th>Descripción</th>
 											<th>Fecha de creación</th>
 											<th>Última actualización</th>

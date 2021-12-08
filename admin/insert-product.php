@@ -112,10 +112,10 @@ $("#suggesstion-box").hide();
 			<form class="form-horizontal row-fluid" name="insertproduct" method="post" enctype="multipart/form-data">
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Categoria</label>
+<label class="control-label" for="basicinput">Categoría</label>
 <div class="controls">
 <select name="category" class="span8 tip" onChange="getSubcat(this.value);"  required>
-<option value="">Seleccione categoria</option> 
+<option value="">Seleccione categoría</option> 
 <?php $query=mysqli_query($con,"select * from category");
 while($row=mysqli_fetch_array($query))
 {?>
@@ -128,7 +128,7 @@ while($row=mysqli_fetch_array($query))
 
 									
 <div class="control-group">
-<label class="control-label" for="basicinput">Sub Categoria</label>
+<label class="control-label" for="basicinput">Sub Categoría</label>
 <div class="controls">
 <select   name="subcategory"  id="subcategory" class="span8 tip" required>
 </select>
@@ -202,7 +202,7 @@ while($row=mysqli_fetch_array($query))
 <div class="control-group">
 <label class="control-label" for="basicinput">Imagen 02 del producto</label>
 <div class="controls">
-<input type="file" name="productimage2"  class="span8 tip" required>
+<input type="file" name="productimage2"  class="span8 tip">
 </div>
 </div>
 

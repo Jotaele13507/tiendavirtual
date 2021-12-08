@@ -88,7 +88,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 					<div class="col-xs-12 col-sm-12 col-md-3 sidebar">
 						<!-- ================================== TOP NAVIGATION ================================== -->
-						< <?php include('includes/side-menu.php');?> <!--MENÚ DE LA IZQUIERDA CON LAS CATEGORIAS -->
+						<?php include('includes/side-menu.php');?> <!--MENÚ DE LA IZQUIERDA CON LAS CATEGORIAS -->
 							<!-- ================================== TOP NAVIGATION : END ================================== -->
 					</div><!-- /.sidemenu-holder -->
 
@@ -172,8 +172,9 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 						<h3 class="new-product-title pull-left">Productos Destacados</h3>
 						<ul class="nav nav-tabs nav-tab-line pull-right" id="new-products-1">
 							<li class="active"><a href="#all" data-toggle="tab">Todos</a></li>
-							<li><a href="#books" data-toggle="tab">Libros</a></li>
-							<li><a href="#furniture" data-toggle="tab">Muebleria</a></li>
+							<li><a href="#smartphones" data-toggle="tab">Smartphones</a></li>
+							<li><a href="#tvs" data-toggle="tab">Mobiliario</a></li>
+							<li><a href="#consolas" data-toggle="tab">Consolas</a></li>
 						</ul><!-- /.nav-tabs -->
 					</div>
 
@@ -231,7 +232,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 
 
-						<div class="tab-pane" id="books">
+						<div class="tab-pane" id="smartphones">
 							<div class="product-slider">
 								<div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
 									<?php
@@ -287,11 +288,11 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 
 
-						<div class="tab-pane" id="furniture">
+						<div class="tab-pane" id="tvs">
 							<div class="product-slider">
 								<div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
 									<?php
-									$ret = mysqli_query($con, "select * from products where category=5");
+									$ret = mysqli_query($con, "select * from products where category=4");
 									while ($row = mysqli_fetch_array($ret)) {
 									?>
 
@@ -343,11 +344,11 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 					<div class="row">
 						<div class="col-md-6">
 							<section class="section">
-								<h3 class="section-title">Smart Phones</h3>
+								<h3 class="section-title">Smartphones</h3>
 								<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
 
 									<?php
-									$ret = mysqli_query($con, "select * from products where category=4 and subCategory=4");
+									$ret = mysqli_query($con, "select * from products where category=3 and subCategory=8");
 									while ($row = mysqli_fetch_array($ret)) {
 									?>
 
@@ -392,7 +393,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 								<h3 class="section-title">Laptops</h3>
 								<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
 									<?php
-									$ret = mysqli_query($con, "select * from products where category=4 and subCategory=6");
+									$ret = mysqli_query($con, "select * from products where category=4 and subCategory=3");
 									while ($row = mysqli_fetch_array($ret)) {
 									?>
 
@@ -441,7 +442,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 
 				<section class="section featured-product inner-xs wow fadeInUp">
-					<h3 class="section-title">Moda</h3>
+					<h3 class="section-title">Componentes</h3>
 					<div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
 						<?php
 						$ret = mysqli_query($con, "select * from products where category=6");
