@@ -107,7 +107,8 @@ if (isset($_GET['pid']) && $_GET['action'] == "wishlist") {
 			<div class='row outer-bottom-sm'>
 				<div class='col-md-3 sidebar'>
 					<!-- ================================== TOP NAVIGATION ================================== -->
-					<?php include('includes/side-menu.php');?> <!--MENÚ DE LA IZQUIERDA CON LAS CATEGORIAS -->
+					<?php include('includes/side-menu.php'); ?>
+					<!--MENÚ DE LA IZQUIERDA CON LAS CATEGORIAS -->
 					<!-- ================================== TOP NAVIGATION : END ================================== -->
 					<div class="sidebar-module-container">
 						<!-- <h3 class="section-title">comprar por</h3> -->
@@ -125,7 +126,7 @@ if (isset($_GET['pid']) && $_GET['action'] == "wishlist") {
 					<div id="category" class="category-carousel hidden-xs">
 						<div class="item">
 							<div class="image">
-								<img src="assets/images/banners/cat-banner-2.jpg" alt="" class="img-responsive">
+								<img src="assets/images/banners/subcategoria2.png" alt="" class="img-responsive">
 							</div>
 							<div class="container-fluid">
 								<div class="caption vertical-top text-left">

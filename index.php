@@ -88,8 +88,9 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 					<div class="col-xs-12 col-sm-12 col-md-3 sidebar">
 						<!-- ================================== TOP NAVIGATION ================================== -->
-						<?php include('includes/side-menu.php');?> <!--MENÚ DE LA IZQUIERDA CON LAS CATEGORIAS -->
-							<!-- ================================== TOP NAVIGATION : END ================================== -->
+						<?php include('includes/side-menu.php'); ?>
+						<!--MENÚ DE LA IZQUIERDA CON LAS CATEGORIAS -->
+						<!-- ================================== TOP NAVIGATION : END ================================== -->
 					</div><!-- /.sidemenu-holder -->
 
 					<div class="col-xs-12 col-sm-12 col-md-9 homebanner-holder">
@@ -98,13 +99,13 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 						<div id="hero" class="homepage-slider3">
 							<div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
 								<div class="full-width-slider">
-									<div class="item" style="background-image: url(assets/images/sliders/slider1.png);">
+									<div class="item" style="background-image: url(assets/images/sliders/slider-navidadp3.jpg);">
 										<!-- /.container-fluid -->
 									</div><!-- /.item -->
 								</div><!-- /.full-width-slider -->
 
 								<div class="full-width-slider">
-									<div class="item full-width-slider" style="background-image: url(assets/images/sliders/slider2.png);">
+									<div class="item full-width-slider" style="background-image: url(assets/images/sliders/slider-ps5.jpg);">
 									</div><!-- /.item -->
 								</div><!-- /.full-width-slider -->
 
@@ -173,8 +174,8 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 						<ul class="nav nav-tabs nav-tab-line pull-right" id="new-products-1">
 							<li class="active"><a href="#all" data-toggle="tab">Todos</a></li>
 							<li><a href="#smartphones" data-toggle="tab">Smartphones</a></li>
-							<li><a href="#tvs" data-toggle="tab">Mobiliario</a></li>
-							<li><a href="#consolas" data-toggle="tab">Consolas</a></li>
+							<li><a href="#mobiliario" data-toggle="tab">Mobiliario</a></li>
+							<li><a href="#monitores" data-toggle="tab">Monitores</a></li>
 						</ul><!-- /.nav-tabs -->
 					</div>
 
@@ -288,11 +289,11 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 
 
-						<div class="tab-pane" id="tvs">
+						<div class="tab-pane" id="mobiliario">
 							<div class="product-slider">
 								<div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
 									<?php
-									$ret = mysqli_query($con, "select * from products where category=4");
+									$ret = mysqli_query($con, "select * from products where category=5");
 									while ($row = mysqli_fetch_array($ret)) {
 									?>
 
@@ -335,6 +336,60 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 								</div>
 							</div>
 						</div>
+
+
+
+
+
+						<!--Inicio Apartado de Monitores -->
+						<div class="tab-pane" id="monitores">
+							<div class="product-slider">
+								<div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
+									<?php
+									$ret = mysqli_query($con, "select * from products where category=4 and subCategory=21");
+									while ($row = mysqli_fetch_array($ret)) {
+									?>
+
+
+										<div class="item item-carousel">
+											<div class="products">
+
+												<div class="product">
+													<div class="product-image">
+														<div class="image">
+															<a href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>">
+																<img src="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>" data-echo="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>" width="180" height="300" alt=""></a>
+														</div>
+
+
+													</div>
+
+
+													<div class="product-info text-left">
+														<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
+														<div class="rating rateit-small"></div>
+														<div class="description"></div>
+
+														<div class="product-price">
+															<span class="price">
+																$.<?php echo htmlentities($row['productPrice']); ?> </span>
+															<span class="price-before-discount">$.<?php echo htmlentities($row['productPriceBeforeDiscount']); ?></span>
+
+														</div>
+
+													</div>
+													<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Agregar a carrito</a></div>
+												</div>
+
+											</div>
+										</div>
+									<?php } ?>
+
+
+								</div>
+							</div>
+						</div>
+						<!--Fin Apartado de Monitores -->
 					</div>
 				</div>
 
@@ -388,12 +443,13 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 								</div>
 							</section>
 						</div>
+
 						<div class="col-md-6">
 							<section class="section">
-								<h3 class="section-title">Laptops</h3>
+								<h3 class="section-title">Consolas</h3>
 								<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
 									<?php
-									$ret = mysqli_query($con, "select * from products where category=4 and subCategory=3");
+									$ret = mysqli_query($con, "select * from products where category=9");
 									while ($row = mysqli_fetch_array($ret)) {
 									?>
 
