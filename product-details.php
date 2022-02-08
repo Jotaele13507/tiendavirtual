@@ -169,7 +169,7 @@ while ($rws=mysqli_fetch_array($ret)) {
 
 							<div class="product-price">	
 								<span class="price">
-									$. <?php echo htmlentities($rws['productPrice']);?>.00
+									$. <?php echo htmlentities($rws['productPrice']);?>
 								</span>
 									
 							    <span class="price-before-discount">$.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>					
