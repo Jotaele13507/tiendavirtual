@@ -122,7 +122,7 @@ while ($rw=mysqli_fetch_array($ret)) {
 
 					<!-- ==============================================CATEGORY============================================== -->
 <div class="sidebar-widget outer-bottom-xs wow fadeInUp">
-	<h3 class="section-title">Categoria</h3>
+	<h3 class="section-title">Categoría</h3>
 	<div class="sidebar-widget-body m-t-10">
 		<div class="accordion">
 
@@ -169,7 +169,7 @@ while ($rws=mysqli_fetch_array($ret)) {
 
 							<div class="product-price">	
 								<span class="price">
-									$. <?php echo htmlentities($rws['productPrice']);?>.00
+									$. <?php echo htmlentities($rws['productPrice']);?>
 								</span>
 									
 							    <span class="price-before-discount">$.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>					

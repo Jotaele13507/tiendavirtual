@@ -27,7 +27,7 @@ $_SESSION['msg']="Category Updated !!";
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin| Categoria</title>
+	<title>Admin| Categoría</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -46,7 +46,7 @@ $_SESSION['msg']="Category Updated !!";
 
 						<div class="module">
 							<div class="module-head">
-								<h3>Categoria</h3>
+								<h3>Categoría</h3>
 							</div>
 							<div class="module-body">
 
@@ -69,9 +69,9 @@ while($row=mysqli_fetch_array($query))
 {
 ?>									
 <div class="control-group">
-<label class="control-label" for="basicinput">Nombre de Categoria</label>
+<label class="control-label" for="basicinput">Nombre de Categoría</label>
 <div class="controls">
-<input type="text" placeholder="Ingrese nombre de categoria"  name="category" value="<?php echo  htmlentities($row['categoryName']);?>" class="span8 tip" required>
+<input type="text" placeholder="Ingrese nombre de categoría"  name="category" value="<?php echo  htmlentities($row['categoryName']);?>" class="span8 tip" required>
 </div>
 </div>
 
